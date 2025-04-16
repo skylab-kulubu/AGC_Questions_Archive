@@ -1,0 +1,1 @@
+bu sorunun çözüm yolu fln filan açıklanarak readme formatında yazılacak gpt düzeltebilir anlamadıysanız bana sorun -baris
