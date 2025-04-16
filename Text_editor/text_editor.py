@@ -69,35 +69,7 @@ def text_editor(inp):
         if len(word) > 7:
             errors += 1
 
-
-def test_cases():
-    phrases = [
-        'Algorithms Games Challenge is the best around.',                                               # 4
-        'Beauty is in the eyes of the beholder. Skating is so much fun.',                               # 5
-        'He owes me a lot.',                                                                            # 1
-        "I would like to check your blood pressure. She is my mother. We closed the deal successfully.",# 8
-        'She had eleven brothers and sisters.',                                                         # 2
-        'What are your favorite candies. There are so many things to consider.'                         # 6
-    ]
-    # for phrase in phrases:
-    #     global errors
-    #     text_editor(phrase)
-    #     print(errors)
-    #     errors = 0
-
-    for index, val in enumerate(phrases):
-        global errors
-        with open('input'+str(index)+'.txt', 'w') as file:
-            file.write(val)
-        
-        with open('output'+str(index)+'.txt', 'w') as file:
-            text_editor(val)
-            file.write(str(errors))
-            errors = 0
-
 if __name__ == '__main__':
-    # text_editor(string)
-    # print(errors)
-    # print('hello world')
-    test_cases()
+    text_editor(string)
+    print(errors)
 

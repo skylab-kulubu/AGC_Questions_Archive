@@ -33,24 +33,7 @@ def consecutive_sum(sum: int) -> int:
     i += 1
   return count
 
-
-def test_cases() -> None:
-  test_cases = []
-
-  for _ in range(5):
-    test_cases.append(random.randint(1, int(1E4)))
-  
-  for _ in range(5, 10):
-    test_cases.append(random.randint(int(1E3), int(1E7)))
-
-  for _ in range(10, 15):
-    test_cases.append(random.randint(int(1E6), int(1E10)))
-
-  print(test_cases)
-
-
 if __name__ == '__main__':
-  # test_cases()
   print(consecutive_sum(int(input())))
 
 
