@@ -1,5 +1,7 @@
-ALGOLAB IN THE ROULETTE ROOM
+*ALGOLAB IN THE ROULETTE ROOM*
+
 Statement
+
 It is a very beautiful day outside but ALGOLAB team isn’t very happy. You want to know why? Because they have been kidnapped by evil master because evil master is bothered by the growing numbers of members in ALGOLAB. So, evil master finds the absurd solution of kidnapping the beautiful members and putting them in the roulette room where they must play the game to leave the room and escape. And the winner of the game would be the only one to get to stay in ALGOAB There is no escape. Evil master forcefully makes others quit. But don’t worry ALGOLAB is strong, and the winner would most definitely bring the team back together as the new leader.
 There are n members in ALGOLAB: Barış, Fatıma, Sena, Kaan, Meryem and many others. When they come into the roulette room, they can’t see anything at first because the room is dark. But there is a toy gun that has m number of bullet chambers. The toy gun has beads instead of actual bullets. There are only k number of beads in the toy gun placed randomly but unfortunately the members of ALGOLAB lack this information. They could only see the gun and the endless beads scattered around when the lights were opened.
 
