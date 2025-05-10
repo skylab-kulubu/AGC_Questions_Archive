@@ -16,6 +16,9 @@ The next line includes the int k that has the number of bullets(beads)
 The next k lines include the index value of the chamber in the gun. (index starts at 0 or 1?)
 Output Format
 The name of the Algolab Beginner’s new lead
+
  Constraints
+ 
 •	1≤ n ≤	5000
+
 •	1≤ m ≤k ≤  5000
