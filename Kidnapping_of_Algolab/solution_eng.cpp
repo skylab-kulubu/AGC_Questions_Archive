@@ -11,7 +11,7 @@
     * @param Peoplecount: number of people
     * @param [out] people: set of people, each person is represented by an integer called by reference so that it can be modified directly
  */
-void Elimination(int bullet_count, int bullets[],long int people_count,unordered_set<int> &people){
+void elimination(int bullet_count, int bullets[],long int people_count,unordered_set<int> &people){
     int i = 0, j=0; 
     auto it = people.begin();
     for(int k=0; k<people_count; k++){
@@ -54,7 +54,7 @@ int main() {
     long int people_count;
     std::cin >> people_count;
  
-    Elimination(bullet_count, bullets, people_count, people);
+    elimination(bullet_count, bullets, people_count, people);
     
     std::cout << *(people.begin()) << std::endl;
 }
