@@ -10,17 +10,12 @@
     * @param bullets: array of bullets, 0 means not used, 1 means used
     * @param Peoplecount: number of people
     * @param [out] people: set of people, each person is represented by an integer called by reference so that it can be modified directly
-     
-    
  */
-void agcsoru4(int bullet_count, int bullets[],long int people_count,unordered_set<int> &people){
-   
-
+void Elimination(int bullet_count, int bullets[],long int people_count,unordered_set<int> &people){
     int i = 0, j=0; 
     auto it = people.begin();
     for(int k=0; k<people_count; k++){
         people.insert(k+1); 
-       
     }
     while(people.size()>1){
         
@@ -32,9 +27,7 @@ void agcsoru4(int bullet_count, int bullets[],long int people_count,unordered_se
         
         if(bullets[i]==0){
             bullets[i]=1;
-        } 
-        
-        else {
+        } else {
             bullets[i]=0;
             people.erase(it);
             j--;
@@ -46,7 +39,7 @@ void agcsoru4(int bullet_count, int bullets[],long int people_count,unordered_se
         j++;
     }
 }
-int main(){
+int main() {
    
     std::unordered_set<int> people;
 
@@ -61,7 +54,7 @@ int main(){
     long int people_count;
     std::cin >> people_count;
  
-    agcsoru4(bullet_count, bullets, people_count, people);
+    Elimination(bullet_count, bullets, people_count, people);
     
     std::cout << *(people.begin()) << std::endl;
 }
