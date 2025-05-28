@@ -1,59 +1,67 @@
-#include <iostream>
-#include <bits/stdc++.h> // Includes all standard template libraries
-using namespace std;
-using namespace std::chrono;
+#include <bits/stdc++.h>
+/**
+    * @brief AGC Sorusu 4
+    * This function simulates a game where people are eliminated based on bullets.
+    * The bullets are represented as an array, where 0 means the bullet is not used and 1 means it is used.
+    * The function iterates through the people and bullets, eliminating people based on the bullets used.
+    * The last person remaining is printed.
+    * 
+    * @param bulletcount: number of bullets
+    * @param bullets: array of bullets, 0 means not used, 1 means used
+    * @param Peoplecount: number of people
+    * @param [out] people: set of people, each person is represented by an integer called by reference so that it can be modified directly
+     
+    
+ */
+void agcsoru4(int bullet_count, int bullets[],long int people_count,unordered_set<int> &people){
+   
 
-int main() {
-    // Input: Bullet positions, number of chambers, number of people.
-    // Output: Which person is the last one remaining?
-
-    // Start measuring execution time
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-    start = std::chrono::system_clock::now();
-
-    int n = 6; // Number of bullet chambers
-    int bullets[n] = {0, 1, 1, 1, 0, 0}; // 0 = empty, 1 = loaded
-
-    long int numPeople = 10; // 10^4
-
-    unordered_set<int> people; // Set to store active players
-    for(int i = 0; i < numPeople; i++) {
-        people.insert(i + 1); // Insert players numbered from 1 to numPeople
+    int i = 0, j=0; 
+    auto it = people.begin();
+    for(int k=0; k<people_count; k++){
+        people.insert(k+1); 
+       
     }
+    while(people.size()>1){
+        
+        j %= people.size();
+        
+        std::advance(it,j);   
 
-    int i = 0, j = 0; // i = index for bullets array, j = index for people
-    auto it = people.begin(); // Iterator for people set
-
-    // Game continues until only one person remains
-    while(people.size() > 1) {
-        j %= people.size();         // Ensure j stays within the range of remaining people
-        advance(it, j);             // Move iterator j steps forward
-        i = i % n;                  // Cycle through the bullets array
-
-        if(bullets[i] == 0) {
-            bullets[i] = 1;         // If bullet is empty, make it loaded (player survives)
-        } else {
-            bullets[i] = 0;         // If bullet is loaded, fire and eliminate the player
-            people.erase(it);       // Remove player from the game
-            j--;                    // Adjust j because the player was removed
+        i = i % bullet_count; 
+        
+        if(bullets[i]==0){
+            bullets[i]=1;
+        } 
+        
+        else {
+            bullets[i]=0;
+            people.erase(it);
+            j--;
         }
+        
+        it = people.begin();
+        
+        i++;
+        j++;
+    }
+}
+int main(){
+   
+    std::unordered_set<int> people;
 
-        it = people.begin();        // Reset iterator after modification
-        i++;                        // Move to the next bullet
-        j++;                        // Move to the next player
+    int bullet_count;
+    std::cin >> bullet_count; 
+
+    int bullets[bullet_count];
+    for(int i=0; i<bullet_count; i++){
+        std::cin >> bullets[i];
     }
 
-    // End measuring execution time
-    end = std::chrono::system_clock::now();
-    std::chrono::duration<double> elapsed_seconds = end - start;
-
-    std::cout << "elapsed time: " << elapsed_seconds.count() << "s\n"; 
-    cout << *(people.begin()) << endl; 
-    cout << "hello"; // Test line
-
-    return 0;
-
-    // Note: A solution without extra space is possible, but more complex.
+    long int people_count;
+    std::cin >> people_count;
+ 
+    agcsoru4(bullet_count, bullets, people_count, people);
+    
+    std::cout << *(people.begin()) << std::endl;
 }
-
-// Time complexity: roughly O(n^2)
