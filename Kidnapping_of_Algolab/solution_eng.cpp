@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <unordered_set>
 /**
     * @brief AGC Sorusu 4
     * This function simulates a game where people are eliminated based on bullets.
