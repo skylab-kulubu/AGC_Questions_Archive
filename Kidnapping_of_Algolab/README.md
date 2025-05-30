@@ -9,15 +9,13 @@ Before they become any more anxious while waiting the evil master comes in to ex
 Everyone takes turns shooting the gun to their heads. If the bead touches your head, you quit ALGOLAB and leave the room. But if you don’t, you have to put a bead into the chamber where you fired the gun. The game continues until there is only one person left. Last one standing gets to stay as an ALGOLAB member. You are expected to give the name of the person who gets to become the new leader as the output.
 
 ## Input Format
-+ First line is an integer `n`, the number of members in ALGOLAB
-+ Next `n` lines include the string that represent the names of the members
-+ The next line gets the int `m` which represents the number of bullet chambers
-+ The next line includes the int `k` that has the number of bullets (beads)
-+ The next `k` lines include the index value of the chamber in the gun. (index starts at 0 or 1?)
++ First line gets the int `m` which represents the number of bullet chambers
++ The next `m` lines include the existence value of the chamber in the gun. (1 means that bullet exists, 0 means that bullet does not exist)
++ Last line is an integer `n`, the number of members in ALGOLAB
 
 ## Output Format
 The name of the Algolab Beginner’s new lead
 
 # Constraints 
++ 1 ≤ m ≤ 5000
 + 1 ≤ n ≤ 5000
-+ 1 ≤ m ≤ k ≤ 5000
