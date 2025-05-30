@@ -6,7 +6,7 @@ def agcsoru4(n, arr, _, m):
 
     # n mermi sayısı, arr mermi arrayi, i kontrol edilecek indis, m insan sayısı
 
-    people = set(range(1, int(m + 2)))  # 1'den num_people'a kadar kişiler seti
+    people = set(range(1, int(m + 1)))  # 1'den num_people'a kadar kişiler seti
 
     i, j = 0, 0
 
