@@ -6,6 +6,10 @@ import (
 )
 
 // TheoremYodas returns the largest array `abcd` that equals a^2 + b^2 + c^2 + d^2 = sum
+//
+// First, stores a^2 + b^2 sums in a hashmap with a and b values going from 0 to square root of num, discarding duplicates.
+// Then, again with values going from 0 to square root of num, checks if num - (c^2 + d^2) is present in the hashmap.
+// Returns the largest array read from left to right.
 func TheoremYodas(num int) (sum [4]int) {
 	sums := map[int][2]int{}
 
