@@ -19,12 +19,12 @@ func TheoremYodas(num int) (sum [4]int) {
 		}
 	}
 
-	for c := limit; c >= 0; c-- {
-		for d := limit; d >= 0; d-- {
+	for c := 0; c <= limit; c++ {
+		for d := 0; d <= c; d++ {
 			if remainder := num - (c*c + d*d); remainder >= 0 {
 				v, ok := sums[remainder]
 				if ok {
-					sum = [4]int{v[0], v[1], c, d}
+					sum = [4]int{c, d, v[0], v[1]}
 				}
 			}
 		}
