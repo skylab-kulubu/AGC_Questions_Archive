@@ -27,6 +27,7 @@ func Density1(nums []int) int {
 			currSum, currLen = 0, 0
 		}
 	}
+
 	if currLen > maxLen || (currLen == maxLen && currSum > maxSum) {
 		maxSum = currSum
 	}
@@ -39,7 +40,6 @@ func main() {
 
 	nums := []int{}
 
-	s.Scan()
 	s.Scan()
 
 	line := s.Text()
