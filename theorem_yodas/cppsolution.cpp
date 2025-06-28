@@ -8,7 +8,7 @@ using namespace std::chrono;
 
 /**
  * @brief Finds a equality for num = a^2 + b^2 + c^2 + d^2. If cannot find, result will be a = b = c = d = 0
- * Its time complexity is O(N^2) because for loops starts from sqrt(num), not sqrt(num).
+ * Its time complexity is O(N^2) because for loops starts from sqrt(num), not num.
  * 
  * @param num
  * @return array<int, 4> [a, b, c, d]
