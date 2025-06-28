@@ -4,20 +4,36 @@
 #include <sstream>
 using namespace std;
 
-// Sadece boşluklara göre split fonksiyonu
+/**
+ * @brief Splits a string using " " delimeter.
+ * For example, converts "a unsplitted string" to ["a", "unsplitted", "string"]
+ * 
+ * @param str 
+ * @return vector<string> 
+ */
 vector<string> split(const string& str) {
-    vector<string> tokens;   // Token'ları saklayacağımız vector
-    
-    stringstream inputStream(str); // inputStream adında bir stringstream nesnesi oluşturduk
-    
+    vector<string> tokens;
+
+    // inputStream is a stream splitted by " ". For "a unsplitted string", it is ["a", "unsplitted", "string"] but not an array. It is stream so need to be
+    // selected using stream get operator (>>)
+    stringstream inputStream(str);
+
     string token;
-    while (inputStream >> token) {  // inputStream üzerinden boşluklarla ayırarak her kelimeyi okur
-        tokens.push_back(token);  // Token'ı vector'a ekler
+    while (inputStream >> token) { // consumes stream until it ends
+        tokens.push_back(token);
     }
-    return tokens;   // Sonuç olarak vector'ü döndürür
+
+    return tokens;
 }
 
-// Palindromik substring bulan fonksiyon
+/**
+ * @brief Creates a dynamic programming matrix to define word is palindrome or not.
+ * For example;
+ * dp[1][4] means that xbaabydfq, "baab" is a palindrome word from str[1] to str[4].
+ * 
+ * @param inputs Includes strings that are not includes " " character.
+ * @return vector<string> 
+ */
 vector<string> findPasswords(const vector<string>& inputs) {
     vector<string> results;
 
@@ -32,12 +48,12 @@ vector<string> findPasswords(const vector<string>& inputs) {
         int start = 0;
         int maxLength = 1;
 
-        // Tek karakterli tüm alt dizeler palindromiktir
+        // All single sized strings are palindromic
         for (int i = 0; i < n; i++) {
             dp[i][i] = true;
         }
 
-        // İki karakterli palindromlar
+        // Checks two-sized strings are palindromic or not.
         for (int i = 0; i < n - 1; i++) {
             if (s[i] == s[i + 1]) {
                 dp[i][i + 1] = true;
@@ -46,7 +62,7 @@ vector<string> findPasswords(const vector<string>& inputs) {
             }
         }
 
-        // Daha uzun palindromlar
+        // For longer than two strings
         for (int length = 3; length <= n; length++) {
             for (int i = 0; i < n - length + 1; i++) {
                 int j = i + length - 1;
@@ -67,18 +83,13 @@ vector<string> findPasswords(const vector<string>& inputs) {
 int main() {
     string input;
 
-    // Kullanıcıdan string al
-    cout << "Bir metin giriniz: ";
+    cout << "Write the text to search passwords: ";
     getline(cin, input);
 
-    // Stringi boşluklara göre parçala
     vector<string> inputs = split(input);
-
-    // Parçalanan stringler üzerinde findPasswords çalıştır
     vector<string> passwords = findPasswords(inputs);
 
-    // Sonuçları yazdır
-    cout << "Gizlenmiş parolalar: " << endl;
+    cout << "Hidden passwords: " << endl;
     for (const string& password : passwords) {
         cout << password << endl;
     }
