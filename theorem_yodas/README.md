@@ -19,3 +19,12 @@ The Padawans set to work, each solving the number on their own sheet. Yoda was t
 
 But how did Yoda do the grading, the conversion of grades 0-100 into these numbers? He used 
 **[Lagrange's 4 Squares Theorem](https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem)**. While the first group of padawans are busy calculating their own grades, can you help Yoda adjust the other group's grades? Can you write a program that calculates that? Yoda is counting on you. May the force be with you!
+
+### Input
+An integer `n`
+
+### Output
+4 numbers written without spaces
+
+### Constraints
+0 <= `n` <= 100
