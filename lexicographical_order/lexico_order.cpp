@@ -13,16 +13,16 @@ using namespace std;
  * @param n 
  */
 void lexicalOrder(int n) {
-    vector<int> normal; // stores 1 to n numbers as int
+    vector<int> normal; // stores integers from 1 to n in natural order
 
     for(int i=0; i < n; ++i){
         normal.push_back(i+1);
     }
 
-    vector<string> lexical;
+    vector<string> lexical; // stores numbers as strings for lexicographical sorting
 
     for(int i = 0; i < n; ++i){
-        string str = to_string(normal[i]);
+        string str = to_string(normal[i]); // convert integer to string
         lexical.push_back(str);
     }
 
