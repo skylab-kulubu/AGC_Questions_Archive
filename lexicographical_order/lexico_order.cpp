@@ -13,7 +13,7 @@ using namespace std;
  * @param n 
  */
 void lexicalOrder(int n) {
-    vector<int> normal; // stores 0 to n numbers as int
+    vector<int> normal; // stores 1 to n numbers as int
 
     for(int i=0; i < n; ++i){
         normal.push_back(i+1);
@@ -21,7 +21,7 @@ void lexicalOrder(int n) {
 
     vector<string> lexical;
 
-    for(int i=0; i < n; ++i){
+    for(int i = 0; i < n; ++i){
         string str = to_string(normal[i]);
         lexical.push_back(str);
     }
@@ -30,7 +30,7 @@ void lexicalOrder(int n) {
     sort(lexical.begin(), lexical.end());
 
     for(int i = 0; i < n; ++i) {
-        cout<< lexical[i]<< " ";
+        cout << lexical[i] << " ";
     }
 }
 
