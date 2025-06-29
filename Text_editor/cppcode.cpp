@@ -71,8 +71,8 @@ void check_words(vector<string> words, int *totalwordcnt) {
 }
 
 /**
- * @brief Counts all words in input and if word count is more than 30, it counts a error.
- * Also, counts all words in each sentence and if word count in a sentence is more than 4, it counts a error.
+ * @brief Counts all words in input and if word count is more than 30, it counts as a error.
+ * Also, counts all words in each sentence and if word count in a sentence is more than 4, it counts as a error.
  * Finally, checks all words in a sentence using check_words() method.
  * 
  * @param input 
