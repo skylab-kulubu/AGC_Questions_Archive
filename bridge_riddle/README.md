@@ -15,6 +15,6 @@ Can you help Algolab escape the night’s curse? 🌙🕰️
 > An integer $t$, minimum required time for all to pass safely.
 
 **Constraints**
-> $ 1 \le n \le 10^6$
+> $1 \le n \le 10^6$
 >
-> $1 \le P \le 10^9 $
+> $1 \le P \le 10^9$
