@@ -8,12 +8,14 @@ If there are multiple sequences with the same length, choose the one with the la
 Can you help Sirac find the answer?  
 
 ## Input
-+ First line is integer `n`.
-+ Second line has `n` integers representing of the number sequence, i.e. `A_i`.
+> First line is integer $n$.
+>
+> Second line has $n$ integers representing of the number sequence, i.e. $A_i$.
 
 ## Output
-The density factor `f`.
+> The density factor $f$.
 
-## Constraits
-+ `n` <= 10^6
-+ `A_i` <= 2^63
+## Constraints
+> $n \le 10^6$
+>
+> $A_i \le 2^{63}$
