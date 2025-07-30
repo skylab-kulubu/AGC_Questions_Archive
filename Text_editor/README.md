@@ -1,3 +1,4 @@
+# Text Editor
 SunnyReads Publishing, a cheerful little book house nestled in a cozy corner of the city, was excited to release its newest children's book. But oh no! The editors at SunnyReads had a tiny problem—they thought the book might be too tricky for young readers!
   
 So, they called in the writer and gave some special guidelines to make the book more kid-friendly:
@@ -27,11 +28,13 @@ And at the end it screamed:
   
 Now, with the machine’s help, even though writers had to suffer machine's whining, SunnyReads  made sure their books were just right for little readers—fun, easy, and full of imagination! 🌟📚✨
 
-### Input:
-A string `M` sized, the paragraph from  the book that author is currently writing.
+---
 
-### Output:
-An integer `N`, the number of mistakes that author made.
+## Input
+> A string $M$ sized, the paragraph from  the book that author is currently writing.
 
-### Constraints
-`M` <= 500
+## Output
+> An integer $N$, the number of mistakes that author made.
+
+## Constraints
+> $M \le 500$
